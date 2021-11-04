@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +30,7 @@ public class TelevisionsController {
     //ANDERE syntax voor GET-request voor alle televisies
     @GetMapping("/televisions")
     public ResponseEntity<Object> getTelevisions() {
-        return ResponseEntity.ok("televisions list: " + televisionsets);
+        return ResponseEntity.ok().body(televisionsets);
     }
 
 
@@ -46,10 +44,10 @@ public class TelevisionsController {
     //ANDERE syntax voor GET-request voor 1 televisie
     @GetMapping("/televisions/{id}")
     public ResponseEntity<Object> getTelevisionById(@PathVariable int id){
-        return ResponseEntity.ok("Television is: " + televisionsets.get(id));
+        return ResponseEntity.ok().body(televisionsets.get(id));
     }
 
-
+    String wandavision = "foobar";
     //eenvoudige POST-request voor 1 televisie
     @PostMapping(value = "/televisionstart")
     // je wilt het liefste een 204 status terug, geen 200
@@ -57,26 +55,29 @@ public class TelevisionsController {
     @ResponseStatus(HttpStatus.CREATED)
     public String addOneTV(@RequestBody String tv) {
         televisionsets.add(tv);
+        televisionsets.add(wandavision);
         return "Added!";
     }
     //ANDERE syntax voor POST-request voor 1 televisie
-    @PostMapping("/televisions")
-    public ResponseEntity<Object> addTelevision(@RequestBody String newTV) throws URISyntaxException {
+//    @PostMapping("/televisions")
+//    public ResponseEntity<Object> addTelevision(@RequestBody String newTV) {
 //        televisionsets.add(newTV);
-        return ResponseEntity.created(new URI("/televisions/" + newTV)).build();
-    }
+//        return ResponseEntity.created();
+//    }
+    // HOEFT NU EVEN NIET, want deze code hoeft niet te werken voor opdracht 1
 
 
     //een PUT-request voor 1 televisie
     //oorspronkelijke aray is: List<String> televisionsets = new ArrayList<>();
-    //    @PutMapping(value = "replacedTelevision")
-    //    ?
-    //      return ResponseEntity.noContent();
+
     @PutMapping("/televisions/{id}")
-    public ResponseEntity<String> update(@RequestBody int id,String updatedTV) {
+    public void update(@RequestBody int id,String updatedTV) {
         String replacedTelevision = televisionsets.set(id,updatedTV);
-        //mislukt: wordt niet geset..?
-        return new ResponseEntity<>(replacedTelevision, HttpStatus.OK);
+        //mag void zijn!
+        //alles wat je returned is eigenlijk alleen maar info aan de gebruiker
+        //de return verandert niets in de array/database zelf.
+        //anders: als je wél iets terugverwacht, dan mag de functie zo zijn:
+        //public ResponseEntity<String> update(@RequestBody...
     }
 
     //eenvoudige DELETE-request voor 1 televisie
@@ -92,14 +93,14 @@ public class TelevisionsController {
     public ResponseEntity<Object> deleteTelevision(@PathVariable int id) {
         televisionsets.remove(id);
         return ResponseEntity.ok("Televisions list after deletion: " + televisionsets);
-        // maar is niet goed? want DELETE verwacht eigenlijk: return ResponseEntity.noContent();
+        // maar DELETE verwacht eigenlijk: return ResponseEntity.noContent();
     }
 
 
 
     //extraatje:
-    //een manier om attributen te gebruiken?
-    //maar deze heeft alleen indexen, geen objecten
+    //een manier om attributen te gebruiken
+    //maar deze elevisionsets Array heeft nu alleen indexen, geen objecten
 //    @GetMapping("/televisions?name={name}")
 //    public ResponseEntity<Object> getTelevisionByName(RequestParam String name) {
 //        return ResponseEntity.ok("television: " + name);
