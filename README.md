@@ -179,3 +179,5 @@ _Let op_: het is uitdagender om jouw eigen stappenplan te maken. Mocht je niet z
 21. Voeg in de functie voor iedere _variable_, die je boven deze functie hebt gedeclareerd, een toewijzing naar de television variable (bijvoorbeeld: `television.setName(name);` )
 22. Pas de `RequestMappings` in de `TelevisionController`, zodat de controller het verzoek doet aan de _servicelaag_ en het response ook ontvangt van de _servicelaag_ (dit omdat we de `Controller` eigenlijk zo dom mogelijk willen houden)
 23. Pas de _servicelaag_ zo aan dat deze gebruik maakt van de gegevens die de _controllerlaag_ doorgeeft, de `Service` moet hier dan de logica aan toepassen om met gebruik van de `Dtos` een _returnwaarde_ terug te kunnen sturen naar de controller
+
+protip voor de huiswerkopdracht van deze week. Als je al die controller, service, etc wilt gaan kopieren, dan kun je makkelijk ctrl+r gebruiken om bijvoorbeeld alle "television" te vervangen met "cimodule". (let daarna nog wel ff op hoofdletters)
