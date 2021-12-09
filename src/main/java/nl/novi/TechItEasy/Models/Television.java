@@ -1,4 +1,4 @@
-package nl.novi.TechItEasy.models;
+package nl.novi.TechItEasy.Models;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ public class Television {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     //dit is de id voor de primary key
     //(incl. annotaties id en generatedValue)
 

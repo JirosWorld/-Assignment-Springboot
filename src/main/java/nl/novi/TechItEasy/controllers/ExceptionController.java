@@ -2,7 +2,7 @@ package nl.novi.TechItEasy.controllers;
 
 // zie EdHub: https://edhub.novi.nl/study/courses/319/content/12872
 
-import nl.novi.TechItEasy.exceptions.RecordNotFoundException;
+import nl.novi.TechItEasy.Exceptions.RecordNotFoundException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

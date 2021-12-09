@@ -1,4 +1,4 @@
-package nl.novi.TechItEasy.exceptions;
+package nl.novi.TechItEasy.Exceptions;
 
 //import java.io.Serial;
 
