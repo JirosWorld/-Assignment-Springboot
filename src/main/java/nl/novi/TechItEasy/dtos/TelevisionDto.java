@@ -1,6 +1,7 @@
-package nl.novi.TechItEasy.Dtos;
+package nl.novi.TechItEasy.dtos;
 
-import nl.novi.TechItEasy.Models.Television;
+import nl.novi.TechItEasy.models.Television;
+
 
 public class TelevisionDto {
     public Long id;
@@ -38,11 +39,11 @@ public class TelevisionDto {
         dto.wifi = television.getWifi();
         dto.voiceControl = television.getVoiceControl();
         dto.hdr = television.getHdr();
-        dto.bleutooth = television.getBluetooth();
+        dto.bleutooth = television.getBleutooth();
         dto.ambiLight = television.getAmbiLight();
         dto.originalStock = television.getOriginalStock();
         dto.sold = television.getSold();
 
         return dto;
-        }
+    }
 }

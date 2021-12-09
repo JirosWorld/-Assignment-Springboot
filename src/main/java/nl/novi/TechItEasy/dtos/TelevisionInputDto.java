@@ -1,6 +1,6 @@
-package nl.novi.TechItEasy.Dtos;
+package nl.novi.TechItEasy.dtos;
 
-import nl.novi.TechItEasy.Models.Television;
+import nl.novi.TechItEasy.models.Television;
 
 public class TelevisionInputDto {
     public Long id;
@@ -42,7 +42,7 @@ public class TelevisionInputDto {
         television.setWifi(wifi);
         television.setVoiceControl(voiceControl);
         television.setHdr(hdr);
-        television.setBluetooth(bleutooth);
+        television.setBleutooth(bleutooth);
         television.setAmbiLight(ambiLight);
         television.setOriginalStock(originalStock);
         television.setSold(sold);
