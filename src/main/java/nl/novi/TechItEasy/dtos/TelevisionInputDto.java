@@ -19,7 +19,7 @@ public class TelevisionInputDto {
     public Boolean wifi;
     public Boolean voiceControl;
     public Boolean hdr;
-    public Boolean bleutooth;
+    public Boolean bluetooth;
     public Boolean ambiLight;
 
     public Integer originalStock;
@@ -42,7 +42,7 @@ public class TelevisionInputDto {
         television.setWifi(wifi);
         television.setVoiceControl(voiceControl);
         television.setHdr(hdr);
-        television.setBleutooth(bleutooth);
+        television.setBluetooth(bluetooth);
         television.setAmbiLight(ambiLight);
         television.setOriginalStock(originalStock);
         television.setSold(sold);

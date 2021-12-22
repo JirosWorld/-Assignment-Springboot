@@ -17,7 +17,7 @@ public class TelevisionDto {
     public Boolean wifi;
     public Boolean voiceControl;
     public Boolean hdr;
-    public Boolean bleutooth;
+    public Boolean bluetooth;
     public Boolean ambiLight;
     public Integer originalStock;
     public Integer sold;
@@ -39,7 +39,7 @@ public class TelevisionDto {
         dto.wifi = television.getWifi();
         dto.voiceControl = television.getVoiceControl();
         dto.hdr = television.getHdr();
-        dto.bleutooth = television.getBleutooth();
+        dto.bluetooth = television.getBluetooth();
         dto.ambiLight = television.getAmbiLight();
         dto.originalStock = television.getOriginalStock();
         dto.sold = television.getSold();

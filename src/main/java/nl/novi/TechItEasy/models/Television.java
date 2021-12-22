@@ -28,7 +28,7 @@ public class Television {
     private Boolean wifi;
     private Boolean voiceControl;
     private Boolean hdr;
-    private Boolean bleutooth;
+    private Boolean bluetooth;
     private Boolean ambiLight;
     private Integer originalStock;
     private Integer sold;
@@ -63,7 +63,7 @@ public class Television {
             Boolean wifi,
             Boolean voiceControl,
             Boolean hdr,
-            Boolean bleutooth,
+            Boolean bluetooth,
             Boolean ambiLight,
             Integer originalStock,
             Integer sold ) {
@@ -80,7 +80,7 @@ public class Television {
         this.wifi = wifi;
         this.voiceControl = voiceControl;
         this.hdr = hdr;
-        this.bleutooth = bleutooth;
+        this.bluetooth = bluetooth;
         this.ambiLight = ambiLight;
         this.originalStock = originalStock;
         this.sold = sold;
@@ -139,8 +139,8 @@ public class Television {
         return hdr;
     }
 
-    public Boolean getBleutooth() {
-        return bleutooth;
+    public Boolean getBluetooth() {
+        return bluetooth;
     }
 
     public Boolean getAmbiLight() {
@@ -220,8 +220,8 @@ public class Television {
         this.hdr = hdr;
     }
 
-    public void setBleutooth(Boolean bleutooth) {
-        this.bleutooth = bleutooth;
+    public void setBluetooth(Boolean bluetooth) {
+        this.bluetooth = bluetooth;
     }
 
     public void setAmbiLight(Boolean ambiLight) {

@@ -54,7 +54,7 @@ public class TelevisionService {
         Television storedTelevision = televisionRepository.findById(id).orElse(null);
         storedTelevision.setAmbiLight(television.getAmbiLight());
         storedTelevision.setAvailableSize(television.getAvailableSize());
-        storedTelevision.setBleutooth(television.getBleutooth());
+        storedTelevision.setBluetooth(television.getBluetooth());
         storedTelevision.setBrand(television.getBrand());
         storedTelevision.setHdr(television.getHdr());
         storedTelevision.setId(storedTelevision.getId());
