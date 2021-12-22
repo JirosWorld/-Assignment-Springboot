@@ -97,10 +97,9 @@ public class TelevisionsController {
     }
 
 
-
     //extraatje:
     //een manier om attributen te gebruiken
-    //maar deze elevisionsets Array heeft nu alleen indexen, geen objecten
+    //maar deze televisionsets Array heeft nu alleen indexen, geen objecten
 //    @GetMapping("/televisions?name={name}")
 //    public ResponseEntity<Object> getTelevisionByName(RequestParam String name) {
 //        return ResponseEntity.ok("television: " + name);
